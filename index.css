@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Varela+Round');
 body {
     font-family: 'Varela Round', sans-serif;
-    background-image: linear-gradient(to left, rgb(17, 17, 17), rgb(27, 27, 27));
+    background-image: url(https://wallpapercave.com/wp/wp10625664.jpg);
     margin: 0;
     padding: 0;
     z-index: 0;
@@ -31,13 +31,12 @@ body {
     cursor: pointer;
 }
 #skull {
-    z-index: 2;
-    margin: 0;
     filter: invert();
-    width: 2em;
+    width: 50px;
     text-align: center;
-    margin: 0 auto;
-
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 #menu {
     height: 50%;
@@ -92,31 +91,36 @@ body {
     position: relative;
     width: 20%;
     top: -8em;
+    font-weight: bold;
+    color: rgb(255, 0, 0);
+    background-color: rgb(0, 0, 0);
+    border: 3px solid rgba(255, 255, 255, 0.527);
 }
 
 #resultButt {
     width: 190px;
     height: 40px;
     border-radius: 2em;
-    border: 1px solid rgb(0, 0, 0);
-    background-image: linear-gradient(to right, rgb(255, 0, 191), rgb(25, 0, 255));
+    border: 1px solid rgb(150, 150, 150);
+    background-image: linear-gradient(to right, rgb(255, 0, 0), rgb(53, 26, 4));
     display: none;
     top: 100px;
     position: relative;
     top: 75px;
     transition: 0.5s;
-    color: white;
+    color: rgb(0, 0, 0);
     margin: 0 auto;
     font-weight: bold;
 }
 #resultButt:hover {
-    background-image: linear-gradient(to right, rgb(241, 36, 190), rgb(88, 70, 255));
+    background-color: red;
     border: 5px solid white;
     width: 210px;
     cursor: pointer;
+    color: white;
 }
 #result {
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.514);
     color: black;
     top: 175px;
     height: 5em;
@@ -132,12 +136,14 @@ body {
     font-weight: bold;
     position: relative;
     top: 40%;
+    color: rgb(255, 255, 255);
+    text-shadow: 0 0 1em black;
 }
 #credits {
     background-color: white;
     width: 12em;
     padding: 20px;
-    border: 3px solid rgb(163, 0, 163);
+    border: 3px solid rgba(255, 0, 0, 0.582);
     border-radius: 2em;
     opacity: 0;
     transition: .7s;
