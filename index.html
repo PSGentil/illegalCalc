@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+    <html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="index.css">
+        <script src="index.js" defer></script>
+        <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/4341/4341087.png" type="image/x-icon">
+        <title>Calculadora - PWA</title>
+    </head>
+    <body>
+        <main>
+            <div id="container">
+                <div id="titulo">
+                    <img id="skull" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Skull_%26_Crossbones_BW.png/430px-Skull_%26_Crossbones_BW.png">
+                    <h1> Calculadora <br> ilegal </h1>
+                </div>
+                <div id="menu">
+                    <input class="botaoMenu" type="button" value="Primo" onclick="primar()">
+                    <input class="botaoMenu" type="button" value="Par/Impar" onclick="parImparar()">
+                    <input class="botaoMenu" type="button" value="Fatorial" onclick="fatorialar()">
+                    <input class="botaoMenu" type="button" value="Quadrado" onclick="quadradar()">
+                    <input class="botaoMenu" type="button" value="Área Circ." onclick="areaCircular()">
+                    <input class="botaoMenu" type="button" value="Bhaskara" onclick="bhaskarar()">
+                    <input class="botaoMenu" type="button" value="Hipotenusa" onclick="hipotenusar()">
+                    <input class="botaoMenu" type="button" value="V. Media" onclick="vmediar()">
+                </div>  
+                <div id="primo"></div>
+                <div id="parimpar"></div>
+                <div id="fatorial"></div>
+                <div id="quadrado"></div>
+                <div id="areacirculo"></div>
+                <div id="bhaskara"></div>
+                <div id="hipotenusa"></div>
+                <div id="vmedia"></div>
+                <label id="a"><input type="number" name="Valor" id="input1"></label>
+                <input type="number" name="Valor" id="input2">
+                <input type="number" name="Valor" id="input3">
+                <button id="resultButt"> Resultado </button>
+                <div id="result">
+                    <p id="resultText"></p>
+                </div>
+            </div>
+            <div id="border">
+                <div id="credits">
+                    <b>Criado por: </b>
+                    <br>
+                    Pedro Samuel 
+                    <br>
+                    Otavio Schimith
+                    <br>
+                    Wesley Dirciney
+                </div>
+            </div>
+        </main>
+    </body>
+</html>
