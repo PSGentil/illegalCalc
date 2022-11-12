@@ -6,6 +6,10 @@ const bhaskara = document.getElementById('bhaskara')
 const areacirculo = document.getElementById('areacirculo')
 const hipotenusa = document.getElementById('hipotenusa')
 const vmedia = document.getElementById('vmedia')
+const celsius = document.getElementById('celsius')
+const raiz = document.getElementById('raiz')
+const potencia = document.getElementById('potencia')
+const deslocamento = document.getElementById('deslocamento')
 
 const menu = document.getElementById('menu')
 const titulo = document.getElementById('titulo')
@@ -26,8 +30,13 @@ titulo.onclick = () => {
     bhaskara.style.display = 'none'
     hipotenusa.style.display = 'none'
     vmedia.style.display = 'none'
+    celsius.style.display = 'none'
+    raiz.style.display = 'none'
+    potencia.style.display = 'none'
+    deslocamento.style.display = 'none'
     result.style.display = 'none'
     resultText.innerText = ''
+    resultText.style.top = '40%'
 
     input1.placeholder = ''
     input2.placeholder = ''
@@ -219,6 +228,81 @@ function vmediar() {
         }
     }
 
+}
+function converterar() {
+    visibilitar(menu, celsius)
+    celsius.appendChild(input1)
+    input1.style.display = 'inline-block'
+    input1.placeholder = '°C:'
+
+    resultButt.onclick = () => {
+        if (input1.value) {
+            let c = Number(input1.value)
+            let f = (c * 1.8) + 32
+            let k = c + 273.15
+
+            resultText.style.top = '25%'
+            resultText.innerText = `°F = ${f} \n °K = ${k}`
+        }
+        else {
+            resultText.innerText = 'Valor inválido' 
+        }
+    }
+}
+function potenciar() {
+    visibilitar(menu, potencia)
+    potencia.appendChild(input1)
+    input1.style.display = 'inline-block'
+    potencia.appendChild(input2)
+    input2.style.display = 'inline-block'
+        
+    resultButt.onclick = () => {
+        let x = Number(input1.value), y = Number(input2.value)
+        if (input1.value && input2.value) {
+            resultText.innerText = `${Math.pow(x, y)}`
+        }
+        else {
+            resultText.innerText = 'Valor inválido' 
+        }
+    }
+}
+function raizar() {
+    visibilitar(menu, raiz)
+    raiz.appendChild(input1)
+    input1.style.display = 'inline-block'
+        
+    resultButt.onclick = () => {
+        if (input1.value) {
+            resultText.innerText = `√${input1.value} = ${Math.sqrt(Number(input1.value))}`
+        }
+        else {
+            resultText.innerText = 'Valor inválido' 
+        }
+    }
+}
+function deslocar() {
+    visibilitar(menu, deslocamento)
+    deslocamento.appendChild(input1)
+    input1.style.display = 'inline-block'
+    input1.placeholder = 'V°:'
+    deslocamento.appendChild(input2)
+    input2.style.display = 'inline-block'
+    input2.placeholder = 't:'
+    deslocamento.appendChild(input3)
+    input3.style.display = 'inline-block'
+    input3.placeholder = 'a:'
+
+    resultButt.onclick = () => {
+        let v = Number(input1.value), t = Number(input2.value), a = Number(input3.value)
+        if (v && t && a) {
+            let delta = v * t + ((a * (t * t)) / 2)
+
+            resultText.innerText = `ΔS = ${delta}`
+        }
+        else {
+            resultText.innerText = 'Valor inválido' 
+        }
+    }
 }
 document.addEventListener('keydown', e => {
     if (e.key == 'Enter') resultButt.click()
