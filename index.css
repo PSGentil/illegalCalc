@@ -50,6 +50,7 @@ body {
     margin: 5px;
     text-align: center;
     font-weight: bold;
+    font-family: inherit;
     font-size: large;
     background-color: rgb(255, 255, 255);
     transition: .3s;
